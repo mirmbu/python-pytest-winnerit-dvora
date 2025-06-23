@@ -1,4 +1,3 @@
-import certifi
 import requests
 import pytest
 from assertpy import assert_that
