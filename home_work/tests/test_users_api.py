@@ -6,8 +6,8 @@ from assertpy import assert_that
 def test_get_all_users():
     response = requests.get("https://jsonplaceholder.typicode.com/users", verify=False)
     assert response.status_code == 200
-    print(list(response))
-    assert len(list(response)) == 10
+    response_body = response.json()
+    assert len(list(response_body)) == 10
 
 def test_get_user_by_id():
     response = requests.get("https://jsonplaceholder.typicode.com/users/1", verify=False)
